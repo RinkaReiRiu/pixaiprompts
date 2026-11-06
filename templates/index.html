@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>琉主播的圖片解說</title>
+
+<link rel="stylesheet" href="/static/css/style.css">
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>💜 琉主播的圖片解說 💜</h1>
+    <p>Azure OpenAI × FastAPI × Multi-Agent</p>
+</div>
+
+<div class="container">
+
+    <div class="input-card">
+
+        <textarea
+            id="prompt"
+            placeholder="請輸入圖片描述..."></textarea>
+
+        <button onclick="generate()">
+            讓琉琉開始分析
+        </button>
+
+    </div>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>① 提示詞分析</h3>
+            <div class="output" id="promptAnalyze"></div>
+        </div>
+
+        <div class="card">
+            <h3>② PixAI Prompt</h3>
+            <div class="output" id="pixPrompt"></div>
+        </div>
+
+        <div class="card">
+            <h3>③ 圖片結構分析</h3>
+            <div class="output" id="imageAnalyze"></div>
+        </div>
+
+        <div class="card">
+            <h3>④ 琉琉初稿</h3>
+            <div class="output" id="draft"></div>
+        </div>
+
+        <div class="card">
+            <h3>⑤ 修改建議</h3>
+            <div class="output" id="suggestions"></div>
+        </div>
+
+        <div class="card final">
+            <h3>⑥ 最終成品</h3>
+            <div class="output" id="final"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/static/js/app.js"></script>
+
+</body>
+</html>
